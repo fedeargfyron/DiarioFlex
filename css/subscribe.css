@@ -1,6 +1,53 @@
-.subscribe-main{
-    text-align: center;
+:root {
+    --start-color: #0575E6;
+    --end-color: #021B79;
+    --p-color: #929DA6;
+    --button-background: #0575E6;
+    --input-background: #e4eff8;
+    --radius-50: 50px;
+    --padding-15: 15px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+form{
+    background-color: rgb(245, 245, 245);
+    padding: 1rem;
+}
+
+input{
+    border: unset;
+    background-color: var(--input-background);
+    padding: var(--padding-15);
+    font-size: 13px;
+    border-radius: var(--radius-50);
+    width: 250px;
+    margin: .5rem .25rem;
+}
+
+button{
+    background-color: var(--button-background);
+    color: #fff;
+    border: unset;
+    width: 120px;
+    border-radius: var(--radius-50);
+    padding: var(--padding-15);
+    cursor: pointer;
     margin: 1rem;
+}
+
+.subscribe-main{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    height: 100%;
 }
 
 .subscribe-main h2{
