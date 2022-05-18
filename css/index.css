@@ -1,0 +1,90 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+main aside{
+    display: none;
+}
+
+aside img{
+    max-width: 50%;
+}
+
+aside img:hover{
+    cursor: pointer;
+}
+
+.main-body{
+    justify-content: center;
+    margin: auto;
+}
+
+.body-new{
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 2rem;
+}
+
+.aside-new{
+    text-align: center;
+    padding: 2rem;
+}
+
+.body-propaganda{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.body-propaganda img{
+    max-width: 25%;
+}
+
+.body-new:hover,
+.body-propaganda img:hover{
+    cursor: pointer;
+}
+
+.body-new h2,
+.aside-new h2{
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.body-new img,
+.aside-new img{
+    margin: .5rem;
+    width: 100%;
+    max-width: 100%;
+}
+
+.body-new p{
+    display: none;
+}
+
+@media only screen and (min-width: 768px){
+    .body-new p{
+        display: block;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    main aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-basis: 25%;
+    }
+
+    .main-body{
+        flex-basis: 40%;
+    }
+
+    .body-propaganda{
+        display: none;
+    }
+}
