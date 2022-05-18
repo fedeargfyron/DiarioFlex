@@ -1,7 +1,7 @@
 main{
     display: flex;
     flex-wrap: wrap;
-    margin: 1rem;
+    margin: 12rem 1rem;
 }
 
 main aside{
