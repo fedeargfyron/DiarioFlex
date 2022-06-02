@@ -1,8 +1,8 @@
 const regExpressions = {
     "pass": /^[a-zA-Z0-9]+$/,
     "email": /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-    "telefono": /(\-*\_*\-*\s*\(*\)*)/g,
-    "direccion": /(\-*\_*\-*\s*\(*\)*)/g
+    "telefono": /^[0-9]{7,}/g,
+    "direccion": /[a-zA-Z]/
 }
 
 const fieldsValidations = {
@@ -28,14 +28,15 @@ const validateEmail = (value) => {
 
 const validateTelefono = (value) => {
     let regex = regExpressions["telefono"];
-    if(value.length < 7 || !value.match(regex)){
+    if(!value.match(regex)){
         return "Número de al menos 7 dígitos, no aceptar espacios, guiones ni paréntesis.";
     }
 }
 
 const validateDireccion = (value) => {
     let regex = regExpressions["direccion"];
-    if(value.length < 5 || !value.match(regex)){
+    let arr = value.split(' ');
+    if(value.length < 5 || isNaN(arr[arr.length - 1]) || !value.match(regex)){
         return "Al menos 5 caracteres, con letras, números y un espacio en el medio.";
     }
 }
