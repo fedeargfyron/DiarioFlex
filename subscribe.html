@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/subscribe.css">
     <script src="https://kit.fontawesome.com/7f4a3cf0b2.js" crossorigin="anonymous"></script>
     <title>Github Pages</title>
+    <script src="./js/validations.js"></script>
 </head>
 <body>
     <header>
@@ -26,15 +27,37 @@
     <main class="subscribe-main">
         <form>
             <h2>Subscribe for free!</h2>
-            <fieldset>
-                <input id="name" type="text" placeholder="Name">
-                <input id="secondName" type="text" placeholder="Second name">
-            </fieldset>
-            <fieldset>
-                <input id="email" type="email" placeholder="Email">
-                <input id="pass" type="password" placeholder="Password">
-            </fieldset>
-            <button type="submite">Let's go</button>
+            <div class="row-container">
+                <div class="input-container">
+                    <input id="name" type="text" placeholder="Nombre">
+                    <label id="lblname" for="name"></label>
+                </div>
+                <div class="input-container">
+                    <input id="apellido" type="text" placeholder="Apellido">
+                    <label id="lblapellido" for="apellido"></label>
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="input-container">
+                    <input id="email" type="text" placeholder="Email">
+                    <label id="lblemail" for="email"></label>
+                </div>
+                <div class="input-container">
+                    <input id="pass" type="password" placeholder="Contraseña">
+                    <label id="lblpass" for="pass"></label>
+                </div>
+            </div>
+            <div class="row-container">
+                <div class="input-container">
+                    <input id="telefono" type="text" placeholder="Telefono">
+                    <label id="lbltelefono" for="telefono"></label>
+                </div>
+                <div class="input-container">
+                    <input id="direccion" type="text" placeholder="Direccion">
+                    <label id="lbldireccion" for="direccion"></label>
+                </div>
+            </div>
+            <button id="submitBtn" type="submit">Let's go</button>
         </form>
     </main>
     <footer>
