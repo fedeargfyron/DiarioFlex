@@ -99,6 +99,3 @@ button{
 .error{
     background-color: var(--error-background);
 }
-
-@media only screen and (min-width: 768px){
-}
